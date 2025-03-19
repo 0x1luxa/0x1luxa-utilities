@@ -1,10 +1,18 @@
-import { defineConfig } from "tsup"
+import { defineConfig, Options } from "tsup"
 
-export default defineConfig({
-  entry: ["src/index.ts"],
-  format: ["cjs", "esm"], // Build for commonJS and ESmodules
-  dts: true, // Generate declaration file (.d.ts)
-  splitting: false,
-  sourcemap: true,
-  clean: true,
-})
+export default defineConfig((options: Options) => ({
+  entry: {
+    index: "src/index.ts",
+  },
+
+  format: ["esm"],
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    }
+  },
+  dts: true,
+  minify: true,
+  external: ["react"],
+  ...options,
+}))
