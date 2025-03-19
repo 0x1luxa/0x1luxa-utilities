@@ -1,0 +1,31 @@
+{
+  "name": "@0x1luxa/utils",
+  "version": "0.2.1",
+  "description": "A collection of utility functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "publish": "npm run build && npm version patch && npm publish",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "utils",
+    "helpers",
+    "utility"
+  ],
+  "author": "0x1luxa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.2",
+    "dayjs": "^1.11.13",
+    "viem": "^2.23.12"
+  }
+}
