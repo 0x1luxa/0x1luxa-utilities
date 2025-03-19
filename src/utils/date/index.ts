@@ -1,1 +1,1 @@
-export * from "./get-day-difference"
+export { getDaysAgo, getFromNow } from "./get-day-difference"

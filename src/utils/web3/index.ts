@@ -1,3 +1,3 @@
-export * from "./getScanLink"
-export * from "./parseRpcError"
-export * from "./shortenAddress"
+export { getScanLink } from "./getScanLink"
+export { parseRpcError } from "./parseRpcError"
+export { shortenAddress } from "./shortenAddress"

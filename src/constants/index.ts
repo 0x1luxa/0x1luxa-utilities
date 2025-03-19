@@ -1,1 +1,8 @@
-export * from "./chains"
+export {
+  CHAIN_IDS_BY_NAME,
+  CHAIN_NAMES_BY_ID,
+  EIDS_BY_CHAIN_ID,
+  SCAN_ADDRESS_PATH_BY_CHAIN_ID,
+  SCAN_LINK_BY_CHAIN_ID,
+  SCAN_TX_PATH_BY_CHAIN_ID,
+} from "./chains"
