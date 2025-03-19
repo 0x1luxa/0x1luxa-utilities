@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.2.9",
   "description": "A collection of utility functions",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "./dist/index",
+  "types": "./dist/index",
   "files": [
     "dist"
   ],
