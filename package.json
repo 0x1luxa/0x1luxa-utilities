@@ -3,8 +3,19 @@
   "type": "module",
   "version": "0.2.10",
   "description": "A collection of utility functions",
-  "module": "./dist/index",
-  "types": "./dist/index",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],

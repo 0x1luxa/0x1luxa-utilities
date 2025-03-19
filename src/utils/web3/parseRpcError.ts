@@ -48,5 +48,3 @@ export const parseRpcError = (
     args: [],
   }
 }
-
-parseRpcError(new Error("Transaction reverted"))
