@@ -1,7 +1,7 @@
 {
   "name": "@0x1luxa/utils",
   "type": "module",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "A collection of utility functions",
   "module": "./dist/index",
   "types": "./dist/index",
