@@ -1,8 +1,8 @@
+import { Address } from "viem"
 import {
   SCAN_ADDRESS_PATH_BY_CHAIN_ID,
   SCAN_LINK_BY_CHAIN_ID,
-} from "@/constants/chains"
-import { Address } from "viem"
+} from "../../constants"
 
 type ScanLinkProps = {
   hash: string
