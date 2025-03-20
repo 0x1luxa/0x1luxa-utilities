@@ -61,6 +61,7 @@ export const formatAmount = (
     }
   }
   return new Intl.NumberFormat("en-US", {
+    // @ts-ignore
     roundingMode: "floor",
     ...options,
   }).format(parsedValue)

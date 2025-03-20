@@ -67,8 +67,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22",
-    "typescript": "^5",
-    "tsup": "^8.4.0"
+    "tsup": "^8.4.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "bignumber.js": "^9.1.2",
