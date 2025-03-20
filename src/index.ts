@@ -1,5 +1,5 @@
-// src/index.ts
+// Основной экспорт
+export * from "./common"
 export * from "./constants"
-export * from "./utils/common"
-export * from "./utils/date"
-export * from "./utils/web3"
+export * from "./date"
+export * from "./web3"

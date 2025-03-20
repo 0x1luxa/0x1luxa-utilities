@@ -1,33 +1,23 @@
 {
   "compilerOptions": {
-    "composite": false,
-    "declarationMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "esNext",
+    "target": "ES2020",
     "module": "ESNext",
-    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "outDir": "dist",
-    "declaration": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
     "paths": {
-      "@0x1luxa/utils": ["./index.ts"],
-      "@0x1luxa/utils/web3": ["./utils/web3/index.ts"],
-      "@0x1luxa/utils/common": ["./utils/common/index.ts"],
-      "@0x1luxa/utils/date": ["./utils/date/index.ts"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,36 +1,62 @@
 {
   "name": "@0x1luxa/utils",
-  "version": "0.2.19",
+  "version": "0.2.18",
   "description": "A collection of utility functions",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "default": "./dist/index.js"
     },
     "./web3": {
-      "import": "./dist/utils/web3/index.js",
-      "types": "./dist/utils/web3/index.d.ts"
+      "types": "./dist/web3.d.ts",
+      "import": "./dist/web3.js",
+      "default": "./dist/web3.js"
     },
     "./common": {
-      "import": "./dist/utils/common/index.js",
-      "types": "./dist/utils/common/index.d.ts"
+      "types": "./dist/common.d.ts",
+      "import": "./dist/common.js",
+      "default": "./dist/common.js"
     },
     "./date": {
-      "import": "./dist/utils/date/index.js",
-      "types": "./dist/utils/date/index.d.ts"
+      "types": "./dist/date.d.ts",
+      "import": "./dist/date.js",
+      "default": "./dist/date.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "web3": [
+        "./dist/web3.d.ts"
+      ],
+      "common": [
+        "./dist/common.d.ts"
+      ],
+      "date": [
+        "./dist/date.d.ts"
+      ]
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "patch-push": "npm version patch && git push --tags",
-    "build": "tsc"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "patch-push": "npm version patch && git push --tags"
   },
   "keywords": [
     "utils",
@@ -41,12 +67,12 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22",
-    "typescript": "^5"
+    "typescript": "^5",
+    "tsup": "^8.4.0"
   },
   "dependencies": {
     "bignumber.js": "^9.1.2",
     "dayjs": "^1.11.13",
-    "tsup": "^8.4.0",
     "viem": "^2.23.12"
   }
 }
