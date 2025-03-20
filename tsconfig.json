@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
     "composite": false,
-    "declaration": true,
     "declarationMap": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
+    "noEmit": false,
     "inlineSources": false,
     "isolatedModules": true,
     "moduleResolution": "node",
@@ -18,8 +15,19 @@
     "strictNullChecks": true,
     "target": "esNext",
     "module": "ESNext",
-    "outDir": "dist"
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@0x1luxa/utils": ["./index.ts"],
+      "@0x1luxa/utils/web3": ["./utils/web3/index.ts"],
+      "@0x1luxa/utils/common": ["./utils/common/index.ts"],
+      "@0x1luxa/utils/date": ["./utils/date/index.ts"]
+    }
   },
-  "include": ["."],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

@@ -4,6 +4,24 @@
   "description": "A collection of utility functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./web3": {
+      "import": "./dist/utils/web3/index.js",
+      "types": "./dist/utils/web3/index.d.ts"
+    },
+    "./common": {
+      "import": "./dist/utils/common/index.js",
+      "types": "./dist/utils/common/index.d.ts"
+    },
+    "./date": {
+      "import": "./dist/utils/date/index.js",
+      "types": "./dist/utils/date/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -12,7 +30,7 @@
   },
   "scripts": {
     "patch-push": "npm version patch && git push --tags",
-    "build": "tsup"
+    "build": "tsc"
   },
   "keywords": [
     "utils",
