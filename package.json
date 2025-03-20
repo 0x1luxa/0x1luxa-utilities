@@ -1,6 +1,6 @@
 {
   "name": "@0x1luxa/utils",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "A collection of utility functions",
   "type": "module",
   "main": "./dist/index.js",
